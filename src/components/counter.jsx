@@ -4,9 +4,9 @@ class Counter extends Component {
   state = {
     count: 0,
   };
-
   handleIncrement = () => {
-    console.log("Increment pressed !", this);
+    console.log("Increment pressed !");
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
