@@ -15,12 +15,18 @@ class Counter extends Component {
       <div>
         {/* <img src={this.state.imageUrl} alt="RandomPic" /> */}
         {/* <span style={this.styles} className="badge badge-primary m-2"> */}
-        <span style={{ fontSize: 20 }} className="badge badge-primary m-2">
+        <span style={{ fontSize: 20 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
         <button className="btn btn-secondary btn-sm">Increment</button>
       </div>
     );
+  }
+
+  getBadgeClasses() {
+    let classes = "badge m-2 badge-";
+    classes += this.state.count === 0 ? "warning" : "primary";
+    return classes;
   }
 
   formatCount() {
