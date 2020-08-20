@@ -5,7 +5,6 @@ class Counter extends Component {
     count: 0,
   };
   handleIncrement = (prevCount) => {
-    console.log(prevCount);
     this.setState({ count: prevCount + 1 });
   };
 
