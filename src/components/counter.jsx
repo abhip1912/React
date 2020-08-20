@@ -5,13 +5,22 @@ class Counter extends Component {
     count: 0,
   };
 
+  handleIncrement() {
+    console.log("Increment pressed !");
+  }
+
   render() {
     return (
       <div>
         <span style={{ fontSize: 20 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
       </div>
     );
   }
